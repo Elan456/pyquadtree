@@ -1,0 +1,7 @@
+
+*.egg-info
+/build/
+/.idea/
+/dist/
+/pyquadtree/__pycache__/
+/__pycache__/
