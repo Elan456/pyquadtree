@@ -4,9 +4,9 @@ Supports fast query, insertion, deletion, and nearest neighbor search.
 
 
 ## Installation
-```bash
-pip install e-pyquadtree
-```
+
+`pip install e-pyquadtree`
+
 
 ## Usage
 
