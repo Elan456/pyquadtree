@@ -2,7 +2,7 @@
 A simple pure Python quadtree implementation.  
 Supports fast query, insertion, deletion, and nearest neighbor search.
 
-![thumbnail](https://github.com/Elan456/pyquadtree/assets/interactive.png)
+![thumbnail](https://github.com/Elan456/pyquadtree/blob/88facad2be5f20196c24711d89753d4a94145009/assets/interactive.png)
 
 ## Installation
 
