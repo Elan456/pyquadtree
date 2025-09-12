@@ -2,6 +2,7 @@
 A simple pure Python quadtree implementation.  
 Supports fast query, insertion, deletion, and nearest neighbor search.
 
+![thumbnail](https://github.com/Elan456/pyquadtree/assets/interactive.png)
 
 ## Installation
 
@@ -25,8 +26,9 @@ quadtree = QuadTree(bbox=(0, 0, 1000, 500), max_elements=10, max_depth=5)
 
 ### 2. Adding elements to the QuadTree
 
-The first argument can be any object you want to store in the quadtree.
-The second argument is a tuple of the form `(x, y)` where `(x, y)` is the location of the object.
+The first argument is the object to store.
+The second argument is a tuple of the form `(x, y)` where `(x, y)` is the location of the object in the bounding box.
+The location must be within the bounding box of the quadtree.
 ```python
 quadtree.add("apple", (100, 100))
 ```
@@ -138,22 +140,22 @@ pyqtree is an alternative pure Python quadtree implementation which can be found
 for this project. 
 
 
-| Number of elements | Brute Force | pyquadtree | pyqtree |
-|--------------------|-------------|------------|---------|
-| 2000               | 0.057       | 0.029      | 0.032   |
-| 4000               | 0.112       | 0.052      | 0.061   |
-| 6000               | 0.165       | 0.097      | 0.1     |
-| 8000               | 0.222       | 0.108      | 0.132   |
-| 10000              | 0.273       | 0.13       | 0.163   |
-| 12000              | 0.334       | 0.177      | 0.197   |
-| 14000              | 0.405       | 0.2        | 0.241   |
-| 16000              | 0.457       | 0.216      | 0.314   |
-| 18000              | 0.504       | 0.282      | 0.334   |
-| 20000              | 0.564       | 0.278      | 0.41    |
-| 22000              | 0.623       | 0.359      | 0.458   |
-| 24000              | 0.681       | 0.35       | 0.557   |
-| 26000              | 0.73        | 0.425      | 0.592   |
-| 28000              | 0.792       | 0.493      | 0.657   |
+| Number of elements | Brute Force | pyquadtree (ours) | pyqtree |
+|--------------------|-------------|-------------------|---------|
+| 2000               | 0.057       | 0.029             | 0.032   |
+| 4000               | 0.112       | 0.052             | 0.061   |
+| 6000               | 0.165       | 0.097             | 0.1     |
+| 8000               | 0.222       | 0.108             | 0.132   |
+| 10000              | 0.273       | 0.13              | 0.163   |
+| 12000              | 0.334       | 0.177             | 0.197   |
+| 14000              | 0.405       | 0.2               | 0.241   |
+| 16000              | 0.457       | 0.216             | 0.314   |
+| 18000              | 0.504       | 0.282             | 0.334   |
+| 20000              | 0.564       | 0.278             | 0.41    |
+| 22000              | 0.623       | 0.359             | 0.458   |
+| 24000              | 0.681       | 0.35              | 0.557   |
+| 26000              | 0.73        | 0.425             | 0.592   |
+| 28000              | 0.792       | 0.493             | 0.657   |
 ----------------------------------------------------------------
 
 At 28000 elements, pyquadtree is 25% faster than pyqtree and 38% faster than brute force.
