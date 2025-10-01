@@ -2,6 +2,25 @@
 A simple pure Python quadtree implementation.  
 Supports fast query, insertion, deletion, and nearest neighbor search.
 
+## ⚠️ Deprecation Notice
+
+This project is **no longer maintained** and is **deprecated**.  
+Please migrate to **fastquadtree**, a faster and actively maintained quadtree for Python.
+
+- PyPI: https://pypi.org/project/fastquadtree/
+- GitHub: https://github.com/Elan456/fastquadtree
+
+**Install**
+```bash
+pip install fastquadtree
+```
+
+```python
+from fastquadtree import Quadtree
+```
+
+---------------
+
 ![thumbnail](https://github.com/Elan456/pyquadtree/blob/88facad2be5f20196c24711d89753d4a94145009/assets/interactive.png)
 
 ## Installation
